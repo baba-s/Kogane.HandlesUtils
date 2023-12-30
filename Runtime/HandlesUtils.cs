@@ -11,6 +11,23 @@ namespace Kogane
         [Conditional( "UNITY_EDITOR" )]
         public static void DrawRectangle
         (
+            in Rect rect,
+            Color   color,
+            float   thickness
+        )
+        {
+            DrawRectangle
+            (
+                position: rect.position,
+                size: rect.size,
+                color: color,
+                thickness: thickness
+            );
+        }
+
+        [Conditional( "UNITY_EDITOR" )]
+        public static void DrawRectangle
+        (
             in Vector3 position,
             in Vector2 size,
             Color      color,
